@@ -1,0 +1,25 @@
+{
+  "name": "project-ccg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRockman/project-ccg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRockman/project-ccg/issues"
+  },
+  "homepage": "https://github.com/TheRockman/project-ccg#readme",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1"
+  }
+}

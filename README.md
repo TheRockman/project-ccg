@@ -2,7 +2,8 @@
 Still untitled card game
 
 #starting the game
-- launch index.html in the html folder
+- Run 'npm install' and 'npm start' 
+- Navigate to http://localhost:8000/html
 - click the middle of the screen to start building a deck
 - click cards until you have 30 in your deck and then confirm
 - or just click 'random deck'

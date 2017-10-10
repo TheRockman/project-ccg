@@ -90,11 +90,11 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
     {
       Id: getId(),
       Available: 'sick',
-      Rules: [],
+      Rules: ['Smuggler'],
       Name: 'Angry Farmboy',
       Ap: 2,
       Hp: 1,
-      Desc: '',
+      Desc: 'Draw a random card when hiered',
       Cost: 2,
       Img: '../img/card.png'
     },
@@ -235,7 +235,6 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   }
 
   function drawACard (deck, hand) {
-
     var randomCard = deck[Math.floor(Math.random()*deck.length)];
     addCardTo(randomCard, hand, deck);
   }
@@ -267,6 +266,15 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
       return;
     }
 
+    var user = {};
+    if (vm.isItMyTurn) {
+      user.attacker = vm.player;
+      user.targetPlayer = vm.enemy;
+    } else {
+      user.attacker = vm.enemy;
+      user.targetPlayer = vm.player;
+    }
+
     for (var i = 0; i < card.Rules.length; i++) {
       if (card.Rules[i] === "Haste") {
         toOne(card, vm.enemy)
@@ -276,6 +284,11 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
       }
       if (card.Rules[i] === "Battleborn") {
         card.Available = true;
+      }
+      if (card.Rules[i] === "Smuggler") {
+        if (user.attacker.HandCards.length<10) {
+          drawACard(vm.allCards, user.attacker.HandCards);
+        }
       }
       if (card.Rules[i] === "Martyr") {
         for (var i = 0; i < vm.myBoard.length; i++) {

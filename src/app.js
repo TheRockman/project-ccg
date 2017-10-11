@@ -1,6 +1,10 @@
-'use strict';
-angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout) {
+"use strict";
 
+const cardApp = angular.module("cardApp", ["ui.router"]);
+
+// cardApp.config(($stateProvider, $urlRouterProvider) => {});
+
+angular.module("cardApp").controller("MainCtrl", function MainCtrl($timeout) {
   var vm = this;
 
   function getId() {
@@ -23,156 +27,157 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   vm.allCards = [
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Haste'],
-      Name: 'Bounty Hunter',
+      Available: "sick",
+      Rules: ["Haste"],
+      Name: "Bounty Hunter",
       Ap: 5,
       Hp: 2,
-      Desc: 'Attacks the enemy when hired',
+      Desc: "Attacks the enemy when hired",
       Cost: 9,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Rage'],
-      Name: 'Town Drunk',
+      Available: "sick",
+      Rules: ["Rage"],
+      Name: "Town Drunk",
       Ap: 4,
       Hp: 2,
-      Desc: 'Attacks all minions when hired',
+      Desc: "Attacks all minions when hired",
       Cost: 6,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Undead'],
-      Name: 'Veteran',
+      Available: "sick",
+      Rules: ["Undead"],
+      Name: "Veteran",
       Ap: 2,
       Hp: 1,
-      Desc: 'Regain 1 Hp when at 0 Hp',
+      Desc: "Regain 1 Hp when at 0 Hp",
       Cost: 3,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Battleborn'],
-      Name: 'Guttersnipe',
+      Available: "sick",
+      Rules: ["Battleborn"],
+      Name: "Guttersnipe",
       Ap: 1,
       Hp: 5,
-      Desc: 'Can attack immediately',
+      Desc: "Can attack immediately",
       Cost: 2,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Holy'],
-      Name: 'Cutthroat',
+      Available: "sick",
+      Rules: ["Holy"],
+      Name: "Cutthroat",
       Ap: 2,
       Hp: 4,
-      Desc: 'Immune to wounded attackers',
+      Desc: "Immune to wounded attackers",
       Cost: 3,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
+      Available: "sick",
       Rules: [],
-      Name: 'Oarssman',
+      Name: "Oarssman",
       Ap: 5,
       Hp: 5,
-      Desc: '',
+      Desc: "",
       Cost: 4,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Smuggler'],
-      Name: 'Angry Farmboy',
+      Available: "sick",
+      Rules: ["Smuggler"],
+      Name: "Angry Farmboy",
       Ap: 2,
       Hp: 1,
-      Desc: 'Draw a random card when hiered',
+      Desc: "Draw a random card when hiered",
       Cost: 2,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
-      Id: getId(), Available: 'sick',
+      Id: getId(),
+      Available: "sick",
       Rules: [],
-      Name: 'Noble Knave',
+      Name: "Noble Knave",
       Ap: 3,
       Hp: 2,
-      Desc:'',
+      Desc: "",
       Cost: 5,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Martyr'],
-      Name: 'Mad Cultist',
+      Available: "sick",
+      Rules: ["Martyr"],
+      Name: "Mad Cultist",
       Ap: 0,
       Hp: 2,
-      Desc: 'Heals all allies and is wounded',
+      Desc: "Heals all allies and is wounded",
       Cost: 7,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
+      Available: "sick",
       Rules: [],
-      Name: 'Meager Barkeep',
+      Name: "Meager Barkeep",
       Ap: 2,
       Hp: 5,
-      Desc: '',
+      Desc: "",
       Cost: 4,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
+      Available: "sick",
       Rules: [],
-      Name: 'Restless Coachman',
+      Name: "Restless Coachman",
       Ap: 5,
       Hp: 2,
-      Desc: '',
+      Desc: "",
       Cost: 6,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Holy'],
-      Name: 'Weary Monk',
+      Available: "sick",
+      Rules: ["Holy"],
+      Name: "Weary Monk",
       Ap: 1,
       Hp: 6,
-      Desc: 'Immune to wounded attackers',
+      Desc: "Immune to wounded attackers",
       Cost: 4,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
-      Rules: ['Rage'],
-      Name: 'Shady Sellsword',
+      Available: "sick",
+      Rules: ["Rage"],
+      Name: "Shady Sellsword",
       Ap: 2,
       Hp: 6,
-      Desc: 'Attacks all minions when hired',
+      Desc: "Attacks all minions when hired",
       Cost: 8,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     },
     {
       Id: getId(),
-      Available: 'sick',
+      Available: "sick",
       Rules: [],
-      Name: 'Salty Captain',
+      Name: "Salty Captain",
       Ap: 1,
       Hp: 2,
-      Desc: '',
+      Desc: "",
       Cost: 1,
-      Img: '../img/card.png'
+      Img: "../img/card.png"
     }
   ];
 
@@ -191,7 +196,7 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
     Mana: 1,
     Hp: 20,
     Ap: 0
-  }
+  };
 
   vm.enemyBoard = [];
   vm.enemyDeck = [];
@@ -210,8 +215,9 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   function randomDeck() {
     vm.myDeck = [];
     for (var i = 0; i < 30; i++) {
-      var randomCard = vm.allCards[Math.floor(Math.random()*vm.allCards.length)];
-      addCardTo(randomCard, vm.myDeck)
+      var randomCard =
+        vm.allCards[Math.floor(Math.random() * vm.allCards.length)];
+      addCardTo(randomCard, vm.myDeck);
     }
     confirm();
   }
@@ -219,23 +225,22 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   function confirm() {
     if (vm.myDeck.length >= 10 && vm.myDeck.length <= 30) {
       vm.deckBuilt = true;
-    }
-    else {
+    } else {
       return;
     }
     for (var i = 0; i < vm.allCards.length; i++) {
-      vm.enemyDeck.push(vm.allCards[i])
+      vm.enemyDeck.push(vm.allCards[i]);
     }
 
     fakeEnemy();
     for (var i = 0; i < 10; i++) {
-      var randomCard = vm.myDeck[Math.floor(Math.random()*vm.myDeck.length)];
-      addCardTo(randomCard, vm.player.HandCards, vm.myDeck)
+      var randomCard = vm.myDeck[Math.floor(Math.random() * vm.myDeck.length)];
+      addCardTo(randomCard, vm.player.HandCards, vm.myDeck);
     }
   }
 
-  function drawACard (deck, hand) {
-    var randomCard = deck[Math.floor(Math.random()*deck.length)];
+  function drawACard(deck, hand) {
+    var randomCard = deck[Math.floor(Math.random() * deck.length)];
     addCardTo(randomCard, hand, deck);
   }
 
@@ -246,23 +251,23 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
 
   function toAll(card, targetArr) {
     for (var i = 0; i < targetArr.length; i++) {
-      toOne(card, targetArr[i])
+      toOne(card, targetArr[i]);
     }
   }
 
   function basicAtk(card) {
     if (vm.activeTarget.Hp && card.Available === true) {
       enforceRulesOnAttack(card, vm.activeTarget);
-      toOne(card, vm.activeTarget)
+      toOne(card, vm.activeTarget);
       card.Available = false;
-      if (vm.activeTarget.Hp<1) {
+      if (vm.activeTarget.Hp < 1) {
         vm.activeTarget = {};
       }
     }
   }
 
   function enforceRulesOnPlay(card) {
-    if (card.Rules.length<1) {
+    if (card.Rules.length < 1) {
       return;
     }
 
@@ -277,16 +282,16 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
 
     for (var i = 0; i < card.Rules.length; i++) {
       if (card.Rules[i] === "Haste") {
-        toOne(card, vm.enemy)
+        toOne(card, vm.enemy);
       }
       if (card.Rules[i] === "Rage") {
-        toAll(card, vm.enemyBoard)
+        toAll(card, vm.enemyBoard);
       }
       if (card.Rules[i] === "Battleborn") {
         card.Available = true;
       }
       if (card.Rules[i] === "Smuggler") {
-        if (user.attacker.HandCards.length<10) {
+        if (user.attacker.HandCards.length < 10) {
           drawACard(vm.allCards, user.attacker.HandCards);
         }
       }
@@ -300,7 +305,7 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   }
 
   function enforceRulesOnDeath(card) {
-    if (card.Rules.length<1)  {
+    if (card.Rules.length < 1) {
       return;
     }
     if (card.Rules[0] === "Undead") {
@@ -309,7 +314,7 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   }
 
   function enforceRulesOnAttack(card, target) {
-    if (card.Rules.length<1 || !target) {
+    if (card.Rules.length < 1 || !target) {
       return;
     }
     if (target.Rules && target.Rules[0] === "Holy") {
@@ -331,10 +336,10 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
   }
 
   function addCardTo(card, arr, removeFrom, mana, manaPool) {
-    if ((mana && manaPool) && (mana > manaPool || arr.length >= 4)) {
+    if (mana && manaPool && (mana > manaPool || arr.length >= 4)) {
       return;
     }
-    if ((mana && manaPool) && (mana <= manaPool)){
+    if (mana && manaPool && mana <= manaPool) {
       manaPool = manaPool - mana;
       enforceRulesOnPlay(card);
     }
@@ -354,7 +359,7 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
     for (var i = 0; i < board.length; i++) {
       var card = board[i];
 
-      enforceRulesOnDeath(card)
+      enforceRulesOnDeath(card);
 
       if (card.Hp < 1) {
         board.splice(board.indexOf(card), 1);
@@ -364,28 +369,38 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
 
   function endGame() {
     if (vm.enemy.Hp < 1) {
-      alert('You won');
+      alert("You won");
     } else if (vm.player.Hp < 1) {
-      alert('You lost');
+      alert("You lost");
     }
   }
 
   function fakeEnemy() {
-    if (vm.enemy.HandCards.length<1) {
+    if (vm.enemy.HandCards.length < 1) {
       for (var i = 0; i < 10; i++) {
         drawACard(vm.enemyDeck, vm.enemy.HandCards);
       }
     }
 
-    if (vm.enemyBoard.length>0) {
+    if (vm.enemyBoard.length > 0) {
       updateCardAvailability(vm.enemyBoard, true);
     }
     for (var i = 0; i < vm.enemy.HandCards.length; i++) {
-      addCardTo(vm.enemy.HandCards[i], vm.enemyBoard, vm.enemy.HandCards, vm.enemy.HandCards[i].Cost,  vm.enemy.Mana);
+      addCardTo(
+        vm.enemy.HandCards[i],
+        vm.enemyBoard,
+        vm.enemy.HandCards,
+        vm.enemy.HandCards[i].Cost,
+        vm.enemy.Mana
+      );
     }
 
-    $timeout(function () {
-      if (vm.enemyBoard.length > 0 && vm.myBoard.length && vm.enemyBoard[0].Available == true) {
+    $timeout(function() {
+      if (
+        vm.enemyBoard.length > 0 &&
+        vm.myBoard.length &&
+        vm.enemyBoard[0].Available == true
+      ) {
         vm.activeTarget = vm.myBoard[0];
         basicAtk(vm.enemyBoard[0]);
       } else if (vm.enemyBoard.length > 0) {
@@ -394,16 +409,15 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
       }
       vm.activeTarget = null;
     }, 2000);
-
   }
 
   var round = 0;
-  vm.newRound = function () {
+  vm.newRound = function() {
     if (vm.isItMyTurn === false) {
       return;
     }
     endGame();
-    if (round < 10 ) {
+    if (round < 10) {
       round++;
     }
 
@@ -417,12 +431,11 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
 
     vm.enemy.Mana = round;
 
-    $timeout(function () {
+    $timeout(function() {
       fakeEnemy();
     }, 3000);
 
-    $timeout(function () {
-
+    $timeout(function() {
       bringOutTheDead(vm.enemyBoard);
       bringOutTheDead(vm.enemyBoard);
       vm.isItMyTurn = true;
@@ -432,6 +445,5 @@ angular.module('cardApp', []).controller('MainCtrl', function MainCtrl($timeout)
       updateCardAvailability(vm.myBoard, true);
       vm.player.Mana = round;
     }, 6000);
-
-  }
+  };
 });

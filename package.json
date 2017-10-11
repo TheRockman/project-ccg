@@ -5,7 +5,8 @@
   "main": "js/app.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack -d --watch",
+    "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "angular": "^1.6.6",
     "connect": "^3.6.5",
-    "serve-static": "^1.13.1"
+    "serve-static": "^1.13.1",
+    "webpack": "^3.6.0"
   }
 }

@@ -1,4 +1,7 @@
 "use strict";
+
+angular.module("CardApp", []);
+
 angular
   .module("cardApp", [])
   .controller("MainCtrl", function MainCtrl($timeout) {

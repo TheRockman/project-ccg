@@ -22,6 +22,7 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
-    "angular": "^1.6.6"
+    "angular": "^1.6.6",
+    "angular-ui-router": "^0.4.3"
   }
 }

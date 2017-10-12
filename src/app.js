@@ -8,4 +8,4 @@ import routes from "./routes";
 //Internal modules
 import start from "./start";
 
-angular.module("DerpStone", [uirouter]).config(routes);
+angular.module("DerpStone", [uirouter, "start"]).config(routes);

@@ -3,7 +3,6 @@
 
 <div class="card-list">
     <div ng-repeat="card in vm.cards">
-        <!-- <card ng-click="vm.addCardTo(card, vm.myDeck)" card-info="card"></card> -->
-        <p>{{card.name}}</p>
+        <card-component card-info="card"></card-component>
     </div>
 </div>

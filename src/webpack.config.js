@@ -14,8 +14,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader"
       },
-      { test: /\.html$/, loader: "html-loader" },
-      { test: /\.css$/, loader: "style!css" }
+      { test: /\.css$/, loaders: "style-loader!css-loader" },
+      { test: /\.html$/, loader: "html-loader" }
     ]
   },
   devtool: "#inline-source-map",

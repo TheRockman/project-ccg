@@ -4,6 +4,7 @@ import uirouter from "angular-ui-router";
 
 //Internal
 import routes from "./routes";
+import "./main.css";
 
 //Internal modules
 import start from "./start";

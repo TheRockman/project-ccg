@@ -1,4 +1,6 @@
-export default function fetchCards() {
+import { deckFactory, cardFactory } from "../game/";
+
+function fetchCards() {
   return [
     {
       available: "sick",
@@ -140,5 +142,22 @@ export default function fetchCards() {
       cost: 1,
       img: "../card/img/card.png"
     }
-  ];
+  ].map(card => cardFactory(card));
 }
+
+const decks = [];
+
+function createDeck(deckName, cards) {
+  const deck = deckFactory({ deckName, cards });
+  decks.push(deck);
+}
+
+function fetchDecks() {
+  return decks;
+}
+
+module.exports = {
+  fetchCards,
+  createDeck,
+  fetchDecks
+};

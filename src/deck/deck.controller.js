@@ -1,5 +1,5 @@
-import cardFactory from "../game/card";
-import fetchCards from "./deck.service";
+import { cardFactory, deckFactory } from "../game";
+import { fetchCards, createDeck } from "./deck.service";
 
 import { findAndRemove, countInArray } from "../utils/utils.service";
 import {
@@ -10,9 +10,10 @@ import {
 export default class DeckController {
   constructor($state) {
     this.state = $state;
+    this.deckName = "";
     this.deck = [];
-    this.cards = fetchCards().map(card => cardFactory(card));
     this.numberOfCardsInDeck = 0;
+    this.cards = fetchCards();
   }
 
   selectCard(card) {
@@ -30,5 +31,18 @@ export default class DeckController {
   removeCard(card) {
     findAndRemove(this.deck, card);
     this.numberOfCardsInDeck--;
+  }
+
+  done() {
+    if (this.numberOfCardsInDeck == DECK_SIZE_LIMIT && this.deckName.length) {
+      createDeck(this.deckName, this.deck);
+      this.state.go("start");
+    } else {
+      alert("Please complete your deck first");
+    }
+  }
+
+  goTo() {
+    this.state.go("start");
   }
 }

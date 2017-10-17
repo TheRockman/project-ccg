@@ -18,5 +18,9 @@ module.exports = {
 
   countInArray: (arr, obj) => {
     return arr.reduce((n, x) => n + (x === obj), 0);
+  },
+
+  getRandomNumberBetween(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 };

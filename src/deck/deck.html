@@ -7,6 +7,7 @@
 </div>
 
 <h3>Deck {{vm.numberOfCardsInDeck}} / 30</h3>
+<button ng-click="vm.createRandomDeck()">Random</button>
 <button ng-click="vm.done()">Done</button> Name your deck: <input type="text" ng-model="vm.deckName">
 <div ng-repeat="card in vm.deck track by $index">
     <card info="card" ng-click="vm.removeCard(card)"></card>

@@ -1,7 +1,11 @@
 import cardFactory from "../game/card";
 import fetchCards from "./deck.service";
 
-import { findAndRemove } from "../utils/utils.service";
+import { findAndRemove, countInArray } from "../utils/utils.service";
+import {
+  DECK_SIZE_LIMIT,
+  NUMBER_OF_SAME_CARD_IN_DECK
+} from "../game/constants";
 
 export default class DeckController {
   constructor($state) {
@@ -11,12 +15,11 @@ export default class DeckController {
     this.numberOfCardsInDeck = 0;
   }
 
-  numberOfCardInDeck() {
-    return;
-  }
-
   selectCard(card) {
-    if (this.deck.length < 30) {
+    if (
+      this.numberOfCardsInDeck < DECK_SIZE_LIMIT &&
+      countInArray(this.deck, card) < NUMBER_OF_SAME_CARD_IN_DECK
+    ) {
       this.deck.push(card);
       this.numberOfCardsInDeck++;
     } else {

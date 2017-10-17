@@ -14,5 +14,9 @@ module.exports = {
 
   findAndRemove: (arr, obj) => {
     arr.splice(arr.indexOf(obj), 1);
+  },
+
+  countInArray: (arr, obj) => {
+    return arr.reduce((n, x) => n + (x === obj), 0);
   }
 };

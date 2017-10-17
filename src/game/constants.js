@@ -1,0 +1,7 @@
+const DECK_SIZE_LIMIT = 30;
+const NUMBER_OF_SAME_CARD_IN_DECK = 4;
+
+module.exports = {
+  DECK_SIZE_LIMIT,
+  NUMBER_OF_SAME_CARD_IN_DECK
+};

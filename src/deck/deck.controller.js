@@ -11,9 +11,17 @@ export default class DeckController {
     this.numberOfCardsInDeck = 0;
   }
 
+  numberOfCardInDeck() {
+    return;
+  }
+
   selectCard(card) {
-    this.deck.push(card);
-    this.numberOfCardsInDeck++;
+    if (this.deck.length < 30) {
+      this.deck.push(card);
+      this.numberOfCardsInDeck++;
+    } else {
+      alert("You have a maximum of cards in your deck!");
+    }
   }
 
   removeCard(card) {

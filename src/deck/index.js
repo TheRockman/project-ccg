@@ -4,6 +4,7 @@ import uirouter from "angular-ui-router";
 import routes from "./deck.routes.js";
 import DeckController from "./deck.controller";
 import card from "../card/card.component";
+import "./deck.css";
 
 export default angular
   .module("deck", [uirouter])

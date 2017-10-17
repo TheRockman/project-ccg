@@ -1,6 +1,10 @@
 <h2>Cards</h2>
 <h3>Click a card to add it to your deck</h3>
-
 <div ng-repeat="card in vm.cards">
-    <card info="card"></card>
+    <card info="card" ng-click="vm.selectCard(card)"></card>
+</div>
+
+<h3>Deck {{vm.numberOfCardsInDeck}}</h3>
+<div ng-repeat="card in vm.deck track by $index">
+    <card info="card" ng-click="vm.removeCard(card)"></card>
 </div>

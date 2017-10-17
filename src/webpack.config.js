@@ -15,7 +15,11 @@ module.exports = {
         loader: "babel-loader"
       },
       { test: /\.css$/, loaders: "style-loader!css-loader" },
-      { test: /\.html$/, loader: "html-loader" }
+      { test: /\.html$/, loader: "html-loader" },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader"
+      }
     ]
   },
   devtool: "#inline-source-map",

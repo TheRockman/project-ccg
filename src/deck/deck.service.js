@@ -8,7 +8,7 @@ export default function fetchCards() {
       hp: 2,
       desc: "Attacks the enemy when hired",
       cost: 9,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -18,7 +18,7 @@ export default function fetchCards() {
       hp: 2,
       desc: "Attacks all minions when hired",
       cost: 6,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -28,7 +28,7 @@ export default function fetchCards() {
       hp: 1,
       desc: "Regain 1 hp when at 0 hp",
       cost: 3,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -38,7 +38,7 @@ export default function fetchCards() {
       hp: 5,
       desc: "Can attack immediately",
       cost: 2,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -48,7 +48,7 @@ export default function fetchCards() {
       hp: 4,
       desc: "Immune to wounded attackers",
       cost: 3,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -58,7 +58,7 @@ export default function fetchCards() {
       hp: 5,
       desc: "",
       cost: 4,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -68,7 +68,7 @@ export default function fetchCards() {
       hp: 1,
       desc: "Draw a random card when hiered",
       cost: 2,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -78,7 +78,7 @@ export default function fetchCards() {
       hp: 2,
       desc: "",
       cost: 5,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -88,7 +88,7 @@ export default function fetchCards() {
       hp: 2,
       desc: "Heals all allies and is wounded",
       cost: 7,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -98,7 +98,7 @@ export default function fetchCards() {
       hp: 5,
       desc: "",
       cost: 4,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -108,7 +108,7 @@ export default function fetchCards() {
       hp: 2,
       desc: "",
       cost: 6,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -118,7 +118,7 @@ export default function fetchCards() {
       hp: 6,
       desc: "Immune to wounded attackers",
       cost: 4,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -128,7 +128,7 @@ export default function fetchCards() {
       hp: 6,
       desc: "Attacks all minions when hired",
       cost: 8,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     },
     {
       available: "sick",
@@ -138,7 +138,7 @@ export default function fetchCards() {
       hp: 2,
       desc: "",
       cost: 1,
-      img: "../img/card.png"
+      img: "../card/img/card.png"
     }
   ];
 }

@@ -4,9 +4,22 @@ export default class StartController {
   constructor($state) {
     this.state = $state;
     this.decks = fetchDecks();
+    this.selectedDeck = null;
   }
 
-  goTo() {
+  selectDeck(deck) {
+    this.selectedDeck = deck;
+  }
+
+  goToBoard() {
+    if (this.selectedDeck === null) {
+      alert("Pick a deck first!");
+      return;
+    }
+
+    this.state.go("board");
+  }
+  goToCreateDeck() {
     this.state.go("deck-create");
   }
 }

@@ -1,8 +1,8 @@
 <h1>Derpstone</h1>
-<button ng-click="vm.goTo()">Create a deck</button>
+<button ng-click="vm.goToCreateDeck()">Create a deck</button>
 
-<button ng-click="">Play</button>
+<button ng-click="vm.goToBoard()">Play</button>
 <h2>Choose your deck</h2>
-<div ng-repeat="deck in vm.decks">
+<div ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)">
     {{deck.deckName}}
 </div>

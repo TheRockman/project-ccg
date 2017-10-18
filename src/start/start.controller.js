@@ -8,7 +8,7 @@ export default class StartController {
   }
 
   selectDeck(deck) {
-    this.selectedDeck = deck;
+    this.selectedDeck = this.selectedDeck === deck ? null : deck;
   }
 
   goToBoard() {

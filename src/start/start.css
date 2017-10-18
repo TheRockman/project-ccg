@@ -1,1 +1,9 @@
+.deck {
+  cursor: pointer;
+  border: solid 1px black;
+  margin-bottom: 5px;
+}
 
+.selected {
+  background-color: tomato;
+}

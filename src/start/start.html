@@ -3,6 +3,8 @@
 
 <button ng-click="vm.goToBoard()">Play</button>
 <h2>Choose your deck</h2>
-<div ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)">
-    {{deck.deckName}}
+<div ng-repeat="deck in vm.decks">
+    <div class="deck" ng-click="vm.selectDeck(deck)" ng-class="{selected: deck === vm.selectedDeck}">
+        {{deck.deckName}}
+    </div>
 </div>

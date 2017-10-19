@@ -9,5 +9,8 @@ import "./main.css";
 //Internal modules
 import start from "./start";
 import deck from "./deck";
+import board from "./board";
 
-angular.module("DerpStone", [uirouter, "start", "deck"]).config(routes);
+angular
+  .module("DerpStone", [uirouter, "start", "deck", "board"])
+  .config(routes);

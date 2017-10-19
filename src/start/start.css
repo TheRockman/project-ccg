@@ -1,3 +1,4 @@
+
 .title{
   color:#fff;
   position: relative;
@@ -15,4 +16,13 @@
   right: 0;
   top: 0;
   bottom:0;
+}
+.deck {
+  cursor: pointer;
+  border: solid 1px black;
+  margin-bottom: 5px;
+}
+
+.selected {
+  background-color: tomato;
 }

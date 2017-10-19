@@ -19,6 +19,7 @@ export default class StartController {
 
     this.state.go("board");
   }
+
   goToCreateDeck() {
     this.state.go("deck-create");
   }

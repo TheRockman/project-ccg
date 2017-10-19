@@ -1,22 +1,21 @@
-
 <div class="row">
   <div class="flex"></div>
   <div class="flex x2 center">
     <h1 class="title">title logo</h1>
     <div class="panel border center">
 
-      <button class="basic-btn" ng-click="vm.goTo()">Create a deck</button>
+      <button class="basic-btn" ng-click="vm.goToCreateDeck()">Create a deck</button>
       <br/>
 
       <span ng-if="vm.decks.length>0">
         <h2>My decks</h2>
         <ul class="deck-list">
-          <li class="deck-list-item" ng-repeat="deck in vm.decks"  ng-click="vm.selectDeck(deck)" ng-class="{selected: deck === vm.selectedDeck}">
+          <li class="deck-list-item" ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)" ng-class="{selected: deck === vm.selectedDeck}">
             {{deck.deckName}}
           </li>
         </ul>
         <br/>
-        <button class="basic-btn" ng-click="">Play</button>
+        <button class="basic-btn" ng-click="vm.goToBoard()">Play</button>
       </span>
 
     </div>

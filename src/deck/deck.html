@@ -1,18 +1,3 @@
-<!--
-
-<h3></h3>
-
-<div ng-repeat="card in vm.cards">
-<card info="card" ng-click="vm.selectCard(card)"></card>
-</div>
-
-
-
-<div ng-repeat="card in vm.deck track by $index">
-<card info="card" ng-click="vm.removeCard(card)"></card>
-</div>
--->
-
 <div class="row">
   <div class="flex">
     <button class="basic-btn" ng-click="vm.goTo()">Back</button>
@@ -44,8 +29,7 @@
       <h3>{{vm.numberOfCardsInDeck}} / 30</h3>
       <button class="basic-btn" ng-click="vm.done()">Done</button>
       <ul class="deck-list">
-        <!-- <card info="card" ng-click="vm.removeCard(card)"></card> -->
-        <li class="deck-list-item" ng-repeat="card in vm.deck track by $index">
+        <li class="deck-list-item" ng-repeat="card in vm.deck track by $index" ng-click="vm.removeCard(card)">
           {{card.name}}
         </li>
       </ul>

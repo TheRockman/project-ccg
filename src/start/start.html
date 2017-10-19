@@ -1,8 +1,25 @@
-<h1>Derpstone</h1>
-<button ng-click="vm.goTo()">Create a deck</button>
 
-<button ng-click="">Play</button>
-<h2>Choose your deck</h2>
-<div ng-repeat="deck in vm.decks">
-    {{deck.deckName}}
+<div class="row">
+  <div class="flex"></div>
+  <div class="flex x2 center">
+    <h1 class="title">title logo</h1>
+    <div class="panel border center">
+
+      <button class="basic-btn" ng-click="vm.goTo()">Create a deck</button>
+      <br/>
+
+      <span ng-if="vm.decks.length>0">
+        <h2>My decks</h2>
+        <ul class="deck-list">
+          <li class="deck-list-item" ng-repeat="deck in vm.decks">
+            {{deck.deckName}}
+          </li>
+        </ul>
+        <br/>
+        <button class="basic-btn" ng-click="">Play</button>
+      </span>
+
+    </div>
+  </div>
+  <div class="flex"></div>
 </div>

@@ -1,14 +1,54 @@
-<h2>Cards</h2>
-<button ng-click="vm.goTo()">Back</button>
-<h3>Click a card to add it to your deck</h3>
+<!--
+
+<h3></h3>
 
 <div ng-repeat="card in vm.cards">
-    <card info="card" ng-click="vm.selectCard(card)"></card>
+<card info="card" ng-click="vm.selectCard(card)"></card>
 </div>
 
-<h3>Deck {{vm.numberOfCardsInDeck}} / 30</h3>
-<button ng-click="vm.createRandomDeck()">Random</button>
-<button ng-click="vm.done()">Done</button> Name your deck: <input type="text" ng-model="vm.deckName">
+
+
 <div ng-repeat="card in vm.deck track by $index">
-    <card info="card" ng-click="vm.removeCard(card)"></card>
+<card info="card" ng-click="vm.removeCard(card)"></card>
+</div>
+-->
+
+<div class="row">
+  <div class="flex">
+    <button class="basic-btn" ng-click="vm.goTo()">Back</button>
+    <button class="basic-btn pull-right" ng-click="vm.createRandomDeck()">Random</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="flex x3">
+    <div class="panel border">
+      <h2>Cards</h2>
+      <p>Click a card to add it to your deck</p>
+      <div class="row">
+        <div class="flex">
+
+          <div class="row-fluid">
+            <div class="flex-fluid center-margin" ng-repeat="card in vm.cards">
+              <card info="card" ng-click="vm.selectCard(card)"></card>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex">
+    <div class="panel border">
+      <input class="input" placeholder="Deck name" autofocus="true" type="text" ng-model="vm.deckName">
+      <h3>{{vm.numberOfCardsInDeck}} / 30</h3>
+      <button class="basic-btn" ng-click="vm.done()">Done</button>
+      <ul class="deck-list">
+        <!-- <card info="card" ng-click="vm.removeCard(card)"></card> -->
+        <li class="deck-list-item" ng-repeat="card in vm.deck track by $index">
+          {{card.name}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

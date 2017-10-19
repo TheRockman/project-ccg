@@ -1,1 +1,18 @@
-
+.title{
+  color:#fff;
+  position: relative;
+	text-shadow:0 0 10px #89aaff,0 0 20px #89aaff,0 0 30px #89aaff,0 0 40px #013b81,0 0 70px #013b81;
+  z-index: 9;
+  padding: var(--spacer);
+}
+.title:before{
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  content: "";
+  background: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+}

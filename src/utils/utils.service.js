@@ -16,6 +16,10 @@ module.exports = {
     arr.splice(arr.indexOf(obj), 1);
   },
 
+  findAndReplace: (arr, oldObj, newObj) => {
+    arr[arr.indexOf(oldObj)] = newObj;
+  },
+
   countInArray: (arr, obj) => {
     return arr.reduce((n, x) => n + (x === obj), 0);
   },

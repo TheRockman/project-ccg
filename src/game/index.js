@@ -1,7 +1,6 @@
 import cardFactory from "./card";
 import deckFactory from "./deck";
+import Game from "./game";
+import { EventDispatcher } from "./eventHandler";
 
-module.exports = {
-  cardFactory,
-  deckFactory
-};
+export { cardFactory, deckFactory, Game, EventDispatcher };

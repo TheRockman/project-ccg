@@ -1,10 +1,8 @@
 <div class="row">
   <div class="flex">
     <button class="basic-btn" ng-click="vm.goTo()">Back</button>
-    <button class="basic-btn pull-right" ng-click="vm.createRandomDeck()">Random</button>
   </div>
 </div>
-
 <div class="row">
   <div class="flex x3">
     <div class="panel border">
@@ -28,6 +26,7 @@
       <input class="input" placeholder="Deck name" autofocus="true" type="text" ng-model="vm.deckName">
       <h3>{{vm.numberOfCardsInDeck}} / 30</h3>
       <button class="basic-btn" ng-click="vm.done()">Done</button>
+      <button class="basic-btn pull-right" ng-click="vm.createRandomDeck()">Random</button>
       <ul class="deck-list">
         <li class="deck-list-item" ng-repeat="card in vm.deck track by $index" ng-click="vm.removeCard(card)">
           {{card.name}}

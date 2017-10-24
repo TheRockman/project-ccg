@@ -1,7 +1,7 @@
 import eventHandler from "./eventHandler";
 import { getRandomNumberBetween, findAndReplace } from "../utils/utils.service";
 import {
-  GAME_START,
+  START_GAME,
   MULLIGAN_PENDING,
   MULLIGAN_REPLACE,
   MULLIGAN_COMPLETED,
@@ -42,7 +42,7 @@ export default class Game {
   main() {
     const event = this.eventDispatcher;
 
-    event.on(GAME_START, () => this.mulliganPhase());
+    event.on(START_GAME, () => this.mulliganPhase());
     event.on(
       MULLIGAN_PENDING,
       event => (this.player.startingHand = event.detail)

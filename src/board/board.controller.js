@@ -1,7 +1,7 @@
 import { Game, EventDispatcher } from "../game";
 import { countInArray } from "../utils/utils.service.js";
 import {
-  GAME_START,
+  START_GAME,
   MULLIGAN_COMPLETED,
   MULLIGAN_REPLACE,
   QUIT_GAME
@@ -19,7 +19,7 @@ export default class BoardController {
     const game = new Game(this.eventDispatcher, this.player);
 
     game.main();
-    this.eventDispatcher.trigger(GAME_START);
+    this.eventDispatcher.trigger(START_GAME);
 
     this.render();
   }

@@ -1,4 +1,36 @@
-<h2>Board</h2>
-<div ng-if="vm.renderingState.mulligan">
-    PICKING CARDS
+<div class="row">
+    <div class="flex x3">
+        <button class="basic-btn" ng-click="vm.quitGame()">Quit</button>
+
+        <div class="panel border">
+
+            <!-- MULIGAN PHASE -->
+            <div class="row" ng-if="vm.state.mulligan">
+                <div class="flex">
+                    <h3>Starting Hand</h3>
+                    <h3>Keep or Replace Cards</h3>
+
+                    <div class="row-fluid">
+                        <div class="flex-fluid center-margin" ng-repeat="card in vm.player.startingHand track by $index">
+                            <card info="card" ng-click="vm.replaceCardMulligan(card, $index)"></card>
+                        </div>
+                    </div>
+                    <button class="basic-btn" ng-click="vm.confirmMulligan()">Confirm</button>
+                </div>
+            </div>
+            <!--END OF MULIGAN PHASE -->
+            <div class="row" ng-if="vm.state.running">
+                <div class="flex">
+                    <h3>Your Hand</h3>
+                    <div class="row-fluid">
+                        <div class="flex-fluid center-margin" ng-repeat="card in vm.player.hand track by $index">
+                            <card info="card"></card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 </div>

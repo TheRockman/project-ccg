@@ -10,10 +10,7 @@ const cardFactory = ({ available, rules, name, ap, hp, desc, cost, img }) => {
     hp,
     desc,
     cost,
-    img,
-    methods: {
-      toString: () => console.log(name)
-    }
+    img
   };
 };
 

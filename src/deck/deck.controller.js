@@ -23,7 +23,7 @@ export default class DeckController {
   createRandomDeck() {
     let card;
     while (this.numberOfCardsInDeck != DECK_SIZE_LIMIT) {
-      card = this.cards[getRandomNumberBetween(0, this.cards.length)];
+      card = this.cards[getRandomNumberBetween(0, this.cards.length - 1)];
       if (countInArray(this.deck, card) < NUMBER_OF_SAME_CARD_IN_DECK) {
         this.deck.push(card);
         this.numberOfCardsInDeck++;

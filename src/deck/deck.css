@@ -1,0 +1,15 @@
+.preview{
+  pointer-events: none;
+  position: absolute;
+  right:0;
+  left: 0;
+  top: 50%;
+  opacity: 0;
+  z-index: 10;
+  transition: var(--animation);
+  transition-delay: 0.5s;
+}
+
+.panel-list-item:hover .preview{
+  opacity: 1;
+}

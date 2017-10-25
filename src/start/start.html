@@ -1,21 +1,25 @@
 <div class="row">
   <div class="flex"></div>
-  <div class="flex x2 center">
-    <h1 class="title">title logo</h1>
-    <div class="panel border center">
-
-      <button class="basic-btn" ng-click="vm.goToCreateDeck()">Create a deck</button>
+  <div class="flex x2">
+    <div class="panel">
+      <h1>
+        Title logo
+        <span class="pull-right">
+          <button class="basic-btn" ng-click="vm.goToCreateDeck()">Create a deck</button>
+        </span>
+      </h1>
       <br/>
 
       <span ng-if="vm.decks.length>0">
-        <h2>My decks</h2>
-        <ul class="deck-list">
-          <li class="deck-list-item" ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)" ng-class="{selected: deck === vm.selectedDeck}">
+        <b>Decks</b>
+        <p>Double tap a deck to play</p>
+        <ul class="panel-list">
+          <li class="panel-list-item pointer" ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)" ng-dblclick="vm.selectDeck(deck); vm.goToBoard()">
             {{deck.deckName}}
           </li>
         </ul>
         <br/>
-        <button class="basic-btn" ng-click="vm.goToBoard()">Play</button>
+        <button class="basic-btn" ng-click="vm.goToBoard()">play</button>
       </span>
 
     </div>

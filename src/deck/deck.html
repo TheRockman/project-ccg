@@ -1,37 +1,43 @@
 <div class="row">
-  <div class="flex">
-    <button class="basic-btn" ng-click="vm.goTo()">Back</button>
-  </div>
-</div>
-<div class="row">
-  <div class="flex x3">
-    <div class="panel border">
-      <h2>Cards</h2>
-      <p>Click a card to add it to your deck</p>
-      <div class="row">
-        <div class="flex">
-
-          <div class="row-fluid">
-            <div class="flex-fluid center-margin" ng-repeat="card in vm.cards">
-              <card info="card" ng-click="vm.selectCard(card)"></card>
-            </div>
-          </div>
-
+  <div class="flex x2">
+    <div class="panel">
+      <h2 class="panel-header">Available cards</h2>
+      <div class="row-fluid">
+        <div class="flex-fluid" ng-repeat="card in vm.cards">
+          <card info="card" ng-click="vm.selectCard(card)"></card>
         </div>
       </div>
     </div>
   </div>
   <div class="flex">
-    <div class="panel border">
-      <input class="input" placeholder="Deck name" autofocus="true" type="text" ng-model="vm.deckName">
-      <h3>{{vm.numberOfCardsInDeck}} / 30</h3>
-      <button class="basic-btn" ng-click="vm.done()">Done</button>
-      <button class="basic-btn pull-right" ng-click="vm.createRandomDeck()">Random</button>
-      <ul class="deck-list">
-        <li class="deck-list-item" ng-repeat="card in vm.deck track by $index" ng-click="vm.removeCard(card)">
+    <div class="panel">
+      <h2 class="panel-header">
+        <input class="input" placeholder="New deck" autofocus="true" type="text" ng-model="vm.deckName">
+        <span class="pull-right">
+          {{vm.numberOfCardsInDeck}} / 30
+        </span>
+      </h2>
+      <ul class="panel-list">
+        <li class="panel-list-item" ng-repeat="card in vm.deck track by $index">
+          <div class="preview">
+            <card info="card"></card>
+          </div>
           {{card.name}}
+          <span class="pull-right pointer" ng-click="vm.removeCard(card)">
+            <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+              <path fill="#fff" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </svg>
+          </span>
         </li>
       </ul>
     </div>
   </div>
+</div>
+
+<div class="footer">
+  <button class="basic-btn" ng-click="vm.goTo()">Back</button>
+  <span class="pull-right">
+    <button class="basic-btn" ng-click="vm.createRandomDeck()">Random</button>
+    <button class="basic-btn" ng-click="vm.done()">Done</button>
+  </span>
 </div>

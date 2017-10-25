@@ -1,1 +1,62 @@
+.board{
+  transform: perspective(50em) rotateX(15deg);
+  background: var(--panel-base);
+  height: 80vh;
+}
 
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: var(--panel-base);
+}
+
+/*my hand*/
+.my-hand{
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  right: 20%;
+  justify-content: center;
+  perspective: 50em;
+}
+
+.my-hand .flex{
+  transition-delay: 0.5s;
+  transform-origin: center bottom;
+  transform: scale(0.6) rotateX(15deg);
+  transition: var(--animation);
+}
+
+.my-hand .flex:hover{
+  transform-origin: center;
+  transform: scale(1) rotateX(0deg);
+}
+
+/*enemy hand*/
+.enemy-hand{
+  position: absolute;
+  top: -20%;
+  z-index: 100;
+  left: 20%;
+  right: 20%;
+  justify-content: center;
+  perspective: 50em;
+}
+
+.enemy-hand .flex{
+  transform-origin: center bottom;
+  transform: scale(0.6) rotateX(15deg);
+}
+
+.enemy-hand .content{
+  opacity:0;
+}
+
+
+.enemy-hand .card, .my-hand.card{
+  box-shadow: 0px 125px 50px rgba(0,0,0,0.4);
+}

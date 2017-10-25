@@ -8,7 +8,8 @@ import {
 } from "../game/events";
 
 export default class BoardController {
-  constructor() {
+  constructor($state) {
+    this.angularState = $state;
     this.state = {
       mulligan: false,
       running: false,
@@ -42,6 +43,7 @@ export default class BoardController {
 
   quitGame() {
     this.eventDispatcher.trigger(QUIT_GAME);
+    this.angularState.go("start");
   }
 
   render() {

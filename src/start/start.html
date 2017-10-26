@@ -12,9 +12,8 @@
 
       <span ng-if="vm.decks.length>0">
         <b>Decks</b>
-        <p>Double tap a deck to play</p>
         <ul class="panel-list">
-          <li class="panel-list-item pointer" ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)" ng-dblclick="vm.selectDeck(deck); vm.goToBoard()">
+          <li class="panel-list-item pointer" ng-repeat="deck in vm.decks" ng-click="vm.selectDeck(deck)" ng-class="{'selected-deck': deck === vm.selectedDeck}">
             {{deck.deckName}}
           </li>
         </ul>
